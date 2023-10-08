@@ -1,0 +1,18 @@
+<header>
+    <div>
+        <mat-toolbar color="primary">
+          <span style="font-size: 60px;cursor: pointer"routerLink="/products" >Webshop</span>
+          <span class="example-spacer"></span>
+          <div class="container">
+            <div class="form-group" >
+                <input type="text" placeholder="Search products" [(ngModel)]="searchTerm" (keyup)="search($event)" class="form-control">
+
+            </div>
+
+            <button  class="btn btn-danger" routerLink="/card">Add to cart
+                <div class="badge bg-warn">{{totalItem}}</div>
+            </button>
+        </div>
+        </mat-toolbar>
+    </div>
+</header>

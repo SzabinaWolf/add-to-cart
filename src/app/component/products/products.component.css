@@ -1,0 +1,12 @@
+.card img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    transition: 0.3s ease-in-out;
+    margin-left: 50px;
+}
+
+.card img:hover{
+        transition: a.3s ease-in-out;
+        transform: scale(1.1);
+}

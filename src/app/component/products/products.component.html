@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <div class="row">
+        <ng-container *ngFor="let item of productList | filter:searchKey: 'title'">
+            <div class="card col-md-3 m-5 p-3">
+                <img [src]="item.image" alt="">
+                <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.description}}</p>
+                <p><strong> Price:  </strong> $ {{item.price}}</p>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Db</span>
+                    </div>
+                    <input type="number" value="1" class="form-control" placeholder="Quantity" aria-label="quantity"
+                        aria-describedby="basic-addon1">
+                </div>
+                <button class="btn btn-primary" (click)="addToCart(item)">Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
